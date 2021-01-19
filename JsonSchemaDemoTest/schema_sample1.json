@@ -1,7 +1,6 @@
 {
   "$id": "https://example.com/person.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Person",
   "type": "object",
   "properties": {
     "firstName": {
@@ -16,6 +15,48 @@
       "description": "Age in years which must be equal to or greater than zero.",
       "type": "integer",
       "minimum": 0
+    },
+    "grade": {
+      "description": "Grade as Primary School Level",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "siblings": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/person" },
+      "default": []
+    }
+  },
+  "definitions": {
+    "person": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "description": "The person's first name."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "The person's last name."
+        },
+        "age": {
+          "description": "Age in years which must be equal to or greater than zero.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "grade": {
+          "description": "Grade as Primary School Level",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "siblings": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/person" },
+          "default": []
+        }
+      }
     }
   }
 }

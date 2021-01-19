@@ -16,9 +16,10 @@ namespace JsonSchemaDemoLib
                 var doc = JsonDocument.Parse(data);
                 JsonSchema schema = JsonSchema.FromText(Schema);
 
-                var validationResult = schema.Validate(doc.RootElement);
+                var options = new ValidationOptions { OutputFormat = OutputFormat.Detailed };
+                var validationResult = schema.Validate(doc.RootElement, options);
 
-                result = validationResult.IsValid ? "Validation Succeeded." : validationResult.Message;
+                result = GetValidationResultMessage(validationResult);
                 return validationResult.IsValid;
             }
             else
@@ -26,5 +27,29 @@ namespace JsonSchemaDemoLib
                 throw new Exception("Schema not set");
             }
         }
+
+        private string GetValidationResultMessage(ValidationResults validationResult)
+        {
+            var resultMessage = string.Empty;
+            if (validationResult.IsValid)
+            {
+                resultMessage = "Validation Succeeded.";
+            }
+            else if (validationResult.NestedResults.Count > 0)
+            {
+                resultMessage = "Validation Errors: ";
+                foreach (var result in validationResult.NestedResults)
+                {
+                    resultMessage += $"{result.Message} found at {result.SchemaLocation.Source}| ";
+                }
+            }
+            else
+            {
+                resultMessage = $"Validation Errors: {validationResult.Message} found at {validationResult.SchemaLocation.Source}| ";
+            }
+
+            return resultMessage;
+        }
+
     }
 }

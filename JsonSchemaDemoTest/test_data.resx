@@ -124,6 +124,9 @@
   <data name="invalid_data_sample1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>invalid_data_sample1.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="invalid_data_sample2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>invalid_data_sample2.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="schema_sample1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>schema_sample1.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

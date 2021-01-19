@@ -83,6 +83,16 @@ namespace JsonSchemaDemoTest {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] invalid_data_sample2 {
+            get {
+                object obj = ResourceManager.GetObject("invalid_data_sample2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] schema_sample1 {
             get {
                 object obj = ResourceManager.GetObject("schema_sample1", resourceCulture);

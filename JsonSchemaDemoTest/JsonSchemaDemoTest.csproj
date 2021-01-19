@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="invalid_data_sample2.json" />
     <None Include="invalid_data_sample1.json" />
     <None Include="data_sample1.json" />
     <None Include="packages.config" />

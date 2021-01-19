@@ -33,7 +33,22 @@ namespace JsonSchemaDemoTest
 
             string message = string.Empty;
             Assert.True(!validator.IsValid(Encoding.UTF8.GetString(test_data.invalid_data_sample1), out message));
-            Assert.Equal("Some error message at least", message);
+            var expectedError = "Validation Errors: -1 is less than or equal to 0 found at #/properties/age/minimum| ";
+            Assert.Equal(expectedError, message);
+        }
+
+        [Fact]
+        public void JsonSchemaTestInvalidCaseWithNestedErrors()
+        {
+            var validator = new JsonSchemaDemoLib.Validator
+            {
+                Schema = Encoding.UTF8.GetString(test_data.schema_sample1)
+            };
+
+            string message = string.Empty;
+            Assert.True(!validator.IsValid(Encoding.UTF8.GetString(test_data.invalid_data_sample2), out message));
+            var expectedError = "Validation Errors: -1 is less than or equal to 0 found at #/properties/age/minimum| 7 is greater than or equal to 6 found at #/properties/grade/maximum| -2 is less than or equal to 0 found at #/properties/siblings/items/$ref/properties/age/minimum| ";
+            Assert.Equal(expectedError, message);
         }
 
         [Fact]
