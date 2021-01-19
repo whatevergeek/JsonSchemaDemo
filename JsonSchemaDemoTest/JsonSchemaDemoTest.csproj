@@ -84,6 +84,10 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JsonNetSchemaValidation\JsonNetSchemaValidation.csproj">
+      <Project>{9cd983ed-33e9-4284-adb6-dcbb80af392c}</Project>
+      <Name>JsonNetSchemaValidation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\JsonSchemaDemoLib\JsonSchemaDemoLib.csproj">
       <Project>{48bd10da-85b0-49c6-868f-ae942350c837}</Project>
       <Name>JsonSchemaDemoLib</Name>

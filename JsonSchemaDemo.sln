@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSchemaDemoLib", "JsonSc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSchemaDemoTest", "JsonSchemaDemoTest\JsonSchemaDemoTest.csproj", "{4B496A18-A967-45F2-AA58-AEA0289F9ADC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonNetSchemaValidation", "JsonNetSchemaValidation\JsonNetSchemaValidation.csproj", "{9CD983ED-33E9-4284-ADB6-DCBB80AF392C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4B496A18-A967-45F2-AA58-AEA0289F9ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B496A18-A967-45F2-AA58-AEA0289F9ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B496A18-A967-45F2-AA58-AEA0289F9ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD983ED-33E9-4284-ADB6-DCBB80AF392C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD983ED-33E9-4284-ADB6-DCBB80AF392C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD983ED-33E9-4284-ADB6-DCBB80AF392C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD983ED-33E9-4284-ADB6-DCBB80AF392C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
